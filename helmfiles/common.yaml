@@ -18,6 +18,7 @@ templates:
     missingFileHandler: Warn
     values:
       - ./{{ .Release.Name }}.yaml.gotmpl
+      - ./{{ .Release.Name }}-helm-{{ requiredEnv "KINDADM_KIND_HELM_ENV" }}-specifics.yaml.gotmpl
   stable: &stable
     <<: *common
     chart: stable/{{ .Release.Name }}

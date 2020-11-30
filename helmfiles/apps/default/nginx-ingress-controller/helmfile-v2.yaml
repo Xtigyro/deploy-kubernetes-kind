@@ -5,3 +5,6 @@ releases:
     namespace: ingress
     version: 5.6.15
     <<: *bitnami
+    values:
+      - image:
+          tag: 0.41.2-debian-10-r0
